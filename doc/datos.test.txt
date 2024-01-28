@@ -1,0 +1,8 @@
+usuario de test VENDEDOR:
+{
+    "id": 575683156,
+    "nickname": "TESTZ2L3UJI0",
+    "password": "qatest5501",
+    "site_status": "active",
+    "email": "test_user_46397741@testuser.com"
+}
