@@ -1,2 +1,2 @@
 # MercadoLibre Admin application
-a website to manage your account in MercadoLibre, where they can choose the cost, the shipping cost and the status of their shipments to all the country. Made with Nest.Js as the backend and Nuxt as the frontend.
+A website to manage your account in MercadoLibre, where they can choose the cost, the shipping cost and the status of their shipments to all the country. Made with Nest.Js as the backend and Nuxt as the frontend.

@@ -280,7 +280,7 @@ export class ItemWorkerService {
                 relations: ['Variations']
             }),
             dbProduct = product_id === null ? null : await this.repoProduct.findOne({
-                where: {id: product_id}
+                where: {id: Number(product_id)}
             });
         if (dbItem && ((product_id && dbProduct) || (product_id === null && dbProduct === null))) {
             dbItem.seller_custom_field = product_id;
@@ -329,7 +329,7 @@ export class ItemWorkerService {
                 .setParameter('variation_id', variation_id)
                 .getOne(),
             dbProduct = product_id === null ? null : await this.repoProduct.findOne({
-                where: {id: product_id}
+                where: {id: Number(product_id)}
             });
         if (dbItem && ((product_id && dbProduct) || (product_id === null && dbProduct === null))) {
             const variation = dbItem.Variations.find(x => x.id === variation_id);

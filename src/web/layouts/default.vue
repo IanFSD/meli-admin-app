@@ -86,7 +86,7 @@
           class="ml-0 pl-4"
           style="width: 300px"
         >
-          <span class="hidden-sm-and-down">ArVen - Administración</span>
+          <span class="hidden-sm-and-down">MercadoLibre Admin</span>
         </v-toolbar-title>
         <!--        <v-text-field-->
         <!--          flat-->
