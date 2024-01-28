@@ -5,7 +5,7 @@
       dark
       flat
     >
-      <v-toolbar-title>ArVen - Administración</v-toolbar-title>
+      <v-toolbar-title>MercadoLibre Administration</v-toolbar-title>
     </v-toolbar>
     <v-card-actions>
       <v-btn color="primary" @click="login">

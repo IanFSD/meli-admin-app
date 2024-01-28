@@ -13,7 +13,7 @@ export class ParameterService {
     }
 
     load() {
-        return this.repo.findOne(1)
+        return this.repo.findOne({where:{}})
     }
 
     async save(body: ParameterDto) {

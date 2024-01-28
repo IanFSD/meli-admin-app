@@ -84,10 +84,10 @@ export class ProductService extends TypeOrmCrudService<ProductEntity> {
                         // impInt: datosFilas[8] ? datosFilas[8] : 0,
                         // etiqueta: datosFilas[9] ? datosFilas[9] : "",
                     };
-                    const product = await this.repo.find({
+                    const product = await this.repo.find({where:{
                         provider: newProduct.provider,
                         code: newProduct.code,
-                    });
+                }});
                     if (product.length > 0) {
                         await this.repo.update({id: product[0].id}, newProduct);
                     } else {
@@ -136,10 +136,10 @@ export class ProductService extends TypeOrmCrudService<ProductEntity> {
                         rubro,
                         active: true
                     };
-                    const product = await this.repo.findOne({
+                    const product = await this.repo.findOne({where:{
                         provider: newProduct.provider,
                         code: newProduct.code,
-                    });
+                    }});
                     if (product) {
                         await this.repo.update({id: product.id}, newProduct);
                     } else {
@@ -182,10 +182,10 @@ export class ProductService extends TypeOrmCrudService<ProductEntity> {
                         iva: datosFilas[8],
                         active: true,
                     };
-                    const product = await this.repo.find({
+                    const product = await this.repo.find({where:{
                         provider: newProduct.provider,
                         code: newProduct.code,
-                    });
+                    }});
                     if (product.length > 0) {
                         await this.repo.update({id: product[0].id}, newProduct);
                     } else {
@@ -233,10 +233,10 @@ export class ProductService extends TypeOrmCrudService<ProductEntity> {
                     // listPrice: datosFilas[4],
                     price: Number(datosFilas[4]),
                 };
-                const product = await this.repo.find({
+                const product = await this.repo.find({where:{
                     provider: newProduct.provider,
                     code: newProduct.code,
-                });
+                }});
                 if (product.length > 0) {
                     await this.repo.update({id: product[0].id}, newProduct);
                 } else {
@@ -275,6 +275,6 @@ export class ProductService extends TypeOrmCrudService<ProductEntity> {
     }
 
     private async MarcarTodosNoActivos(provider: string) {
-        await this.repo.find({provider: provider});
+        await this.repo.find({where:{provider: provider}});
     }
 }

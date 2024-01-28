@@ -194,7 +194,7 @@ export class MercadolibreConnectionService {
                 expires_date: date
             };
             // veo si hay que agregar o actualizar
-            const currentToken = await this.repoToken.findOne(1);
+            const currentToken = await this.repoToken.findOne({where:{}});
             if (currentToken) {
                 this.logger.debug(`Grabo el token del usuario ${newToken.user_id}`);
                 return await this.repoToken.update(1, token);
@@ -211,7 +211,7 @@ export class MercadolibreConnectionService {
     private async checkToken() {
         if (!this.token) {
             try {
-                this.token = await this.repoToken.findOne(1)
+                this.token = await this.repoToken.findOne({where:{}})
             } catch (e) {
                 this.logger.error('Ocurrio un error las leer el token de la base de datos', getTrace(e))
             }
